@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Javascript</title>
+</head>
+<body>
+
+<h2 style="color: blue; text-align: center;">What Can JavaScript Do?</h2>
+
+<h3>1) Change HTML Content</h3>
+
+<p id="demo">JavaScript can change HTML content.</p>
+
+<button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'>Click Me!</button>
+
+<h3>2) Change Style</h3>
+<p id="demo2">JavaScript can change the style of an HTML element.</p>
+
+<script>
+function myStyle() 
+{
+  document.getElementById("demo2").style.fontSize = "25px"; 
+  document.getElementById("demo2").style.color = "red";
+  document.getElementById("demo2").style.backgroundColor = "yellow";  
+  document.getElementById("demo2").style.fontFamily = "Lucida";       
+}
+</script>
+
+<button type="button" onclick="myStyle()">Click Me!</button>
+
+<h3>3) Change attributes</h3>
+
+<p>Here, a JavaScript changes the value of the src (source) attribute of an image.</p>
+
+<script>
+function lampu(a) {
+  var pic;
+  if (a == 0) 
+  {
+    pic = "images/pic_bulboff.gif"
+  } 
+  else 
+  {
+    pic = "images/pic_bulbon.gif"
+  }
+  document.getElementById('gambor').src = pic;
+}
+</script>
+
+<img id="gambor" src="images/pic_bulboff.gif" width="100" height="180">
+
+<p>
+<button type="button" onclick="lampu(7)">Light On</button>
+<button type="button" onclick="lampu(0)">Light Off</button>
+</p>
+
+<h3>4) Popup Window</h3>
+
+<h4>a) Alert Box</h4>
+<p>This is using alert box function</p>
+<button onclick="myAlertBox()">Press it HERE</button>
+
+<script>
+function myAlertBox() 
+{
+  alert("This is alert box!");
+}
+</script>
+
+<h4>b) Confirm Box</h4>
+<p>This is using confirm box function</p>
+<button onclick="myconfirm()">Try it</button>
+
+<p id="demo3"></p>
+
+<script>
+function myconfirm() {
+  var b;
+  if (confirm("Press a button!")) {
+    b = "You pressed OK!";
+  } else {
+    b = "You pressed Cancel!";
+  }
+  document.getElementById("demo3").innerHTML = b;
+}
+</script>
+
+<h4>c) Prompt function</h4>
+<p>This is using promt function - where user enter input</p>
+<button onclick="myFunction()">Tekan Sini!</button>
+
+<p id="demo4"></p>
+
+<script>
+function myFunction() {
+  let text;
+  let person = prompt("Please enter your name:", "Ainatul");
+  if (person == null || person == "") {
+    text = "User cancelled the prompt.";
+  } else {
+    text = "Hello " + person + "! \nHow are you today?";
+  }
+  document.getElementById("demo4").innerHTML = text;
+} 
+</script>
+
+<h4>d) Line Break in popup box</h4>
+<p>Line-breaks in a popup box.</p>
+
+<button onclick="alert('Hello\nHow are you?')">Click Here!!</button>
+
+
+</body>
+</html>

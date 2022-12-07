@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>HTML Table Styling - HTML Zebra Strip</title>
+
+	<style>
+		table, th, tr, td
+		{
+			border: 1px solid red;
+			border-collapse: collapse;
+		}
+		th, td
+		{
+			padding: 2px;
+
+		}		
+		th 
+		{
+			text-align: left;
+			background-color: cadetblue;
+		}
+		tr:nth-child(even)
+		{
+			background-color: skyblue;
+		}
+
+	</style>
+
+</head>
+<body>
+
+	<table style="width: 100%;">
+		<caption>This is basic table</caption>
+		<!-- border: solid, dashed, dotted-->
+		<tr>
+			<th>Name</th> <!--column-->
+			<th>Phone Number</th>
+			<th>Emel</th>
+		</tr>
+		<tr>
+			<td>Nur Ainatul Mardiah</td>
+			<td>0145142921</td>
+			<td>ainatulmardiah@uitm.edu.my</td>
+		</tr>
+		<tr>
+			<td>Sakinah Mawaddah</td>
+			<td>0145142331</td>
+			<td>sakinamawaddah@gmail.com</td>
+		</tr>	
+		<tr>
+			<td>Ammar Ammir</td>
+			<td>0123142331</td>
+			<td>ammir-ammar@gmail.com</td>
+		</tr>			
+	</table>
+
+</body>
+</html>
